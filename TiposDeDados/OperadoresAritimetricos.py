@@ -32,3 +32,22 @@ print("Exponeciação",exponeciacao)
 #Resto da divisao
 resto_da_divisao = 10 % 3
 print("Resto da divisão", resto_da_divisao)
+
+#colocando '+' no lugar no ',' ele junta os valores sem colocar um divisor entre eles se forem strings
+print("concatenação usando '+'","um"+"dois"+"tres"+"quatro")
+
+#colocando o sinal de multiplicação com uma string ele vai fazer a repetição
+a_muitas_vezes = "A" * 8
+print("letra vezes numero", a_muitas_vezes)
+
+#ordem dos operadores = os que estiverem entre parenteses, exponencias, divisões e multiplicações e no final soma e subtração
+# 1° (n + n)
+# 2° **
+# 3° */ // %
+# 4° + -
+# se estiverem no mesmo nível e estiverem na mesma conta, serão executados da esquerda para a direita
+
+conta = 1 + 1 ** 5 + 5 #valor desejado 1024
+conta_certa = (1 + 1) ** (5 + 5)
+print("Ordem das operações",conta)
+print("Ordem das operações certa",conta_certa)
