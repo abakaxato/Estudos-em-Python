@@ -21,7 +21,7 @@ while(sys != str(0)):
         if (entrada == str(1)):
             role = True;
             print("\nLegal !!!\n Seja bem vindo a nossa loja");
-            while(cliente_atual != 1 and cliente_atual != 2 and cliente_atual !=3):
+            while(cliente_atual != cliente1 and cliente_atual != cliente2 and cliente_atual !=cliente3):
                 print("\nPor favor, selecione qual cliente voce é\n");
                 print("1 - ", cliente1);
                 print("2 - ", cliente2);
@@ -51,7 +51,7 @@ while(sys != str(0)):
             print("\nNossa loja está sem produtos no momento, por favor volte mais tarde\n");
         else: 
             print("\n Muito bem", cliente_atual,":)")
-            print("\nAgora que sabemos que voce é cliente, vamos começar as compras\n");
+            print("Agora que sabemos que voce é cliente, vamos começar as compras\n");
             
             print("Esses são os produtos disponiveis no momento\n");
             print("Produto 1: ", produto1, " Preço: R$", preco1);
@@ -180,6 +180,8 @@ while(sys != str(0)):
     if (sys == 's'):
         sys = str(1);
         entrada = str(0);
+        soma = float(0);
+        compras = int(1);
     elif(sys == 'n'):
         sys = str(0);
         print("\nSistema finalizado, obrigado por usar nosso sistema !!!\n");
