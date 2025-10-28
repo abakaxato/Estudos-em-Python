@@ -7,6 +7,8 @@ preco5 = 0.0; produto5=None;
 role = bool(); entrada = str (0);
 soma = float(0); sys = str(1);
 compras = int(1); comprando = str();
+cliente1 = str(); cliente2 = str();
+cliente3 = str(); cliente_atual = str();
 
 #Inicio do programa
 while(sys != str(0)):
@@ -19,6 +21,20 @@ while(sys != str(0)):
         if (entrada == str(1)):
             role = True;
             print("\nLegal !!!\n Seja bem vindo a nossa loja");
+            while(cliente_atual != 1 and cliente_atual != 2 and cliente_atual !=3):
+                print("\nPor favor, selecione qual cliente voce é\n");
+                print("1 - ", cliente1);
+                print("2 - ", cliente2);
+                print("3 - ", cliente3);
+                cliente_atual = input("\nDigite o numero do cliente que voce é (1 a 3): ");
+                if (cliente_atual == str(1)):
+                    cliente_atual = cliente1;
+                elif (cliente_atual == str(2)):
+                    cliente_atual = cliente2;
+                elif (cliente_atual == str(3)):
+                    cliente_atual = cliente3;
+                else:
+                    print("\nValor inválido, por favor digite um valor entre 1 e 3\n");
         elif (entrada ==str(2)):
             role = False;
             print("\n\n\n\nOpa !!!\n Seja bem vindo de volta colaborador");
@@ -31,8 +47,10 @@ while(sys != str(0)):
 
     if (role == True):
         if(not produto1 or not produto2 or not produto3 or not produto4 or not produto5):
+            print("\n Desculpe", cliente_atual,":(")
             print("\nNossa loja está sem produtos no momento, por favor volte mais tarde\n");
         else: 
+            print("\n Muito bem", cliente_atual,":)")
             print("\nAgora que sabemos que voce é cliente, vamos começar as compras\n");
             
             print("Esses são os produtos disponiveis no momento\n");
@@ -99,6 +117,7 @@ while(sys != str(0)):
                     if (comprando == 's'):
                         compras = 0;
                         print("\nObrigado por visitar nossa loja, volte sempre !!!\n");
+                        print("\n voce fechou uma compra de no valor de R$"+ str(soma) + " : ");
                     else:
                         continue;
                 elif (cat == 0):
