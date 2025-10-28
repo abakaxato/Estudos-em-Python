@@ -1,9 +1,9 @@
 #Declaração de variaveis
-preco1 = float; produto1=str;
-preco2 = float; produto2=str;
-preco3 = float; produto3=str;
-preco4 = float; produto4=str;
-preco5 = float; produto5=str;
+preco1 = float; produto1=None;
+preco2 = float; produto2=None;
+preco3 = float; produto3=None;
+preco4 = float; produto4=None;
+preco5 = float; produto5=None;
 role = bool; cr = int (0);
 soma = float(0); sys = str(1);
 
@@ -30,7 +30,7 @@ while(sys != str(0)):
         
 
     if (role == True):
-        if(not produto1 or produto2 or produto3 or produto4 or produto5):
+        if(not produto1 or not produto2 or not produto3 or not produto4 or not produto5):
             print("\nNossa loja está sem produtos no momento, por favor volte mais tarde\n");
             break
         else: 
@@ -111,13 +111,13 @@ while(sys != str(0)):
         preco5 = float(input("Digite o preço do produto 5: R$"));
         
         print("\nProdutos cadastrados com sucesso !!!\n");
-sys = input("Deseja reiniciar o sistema ? (digite 's' para sim ou 'n' para não) : ");
+    sys = input("Deseja reiniciar o sistema ? (digite 's' para sim ou 'n' para não) : ");
     if (sys == 's'):
         sys = str(1);
         cr = str(0);
     else:
         sys = str(0);
-else:
+
     print("\nSistema finalizado, obrigado por usar nosso sistema !!!\n");
         
 
