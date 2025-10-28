@@ -4,7 +4,7 @@ preco2 = 0.0; produto2=None;
 preco3 = 0.0; produto3=None;
 preco4 = 0.0; produto4=None;
 preco5 = 0.0; produto5=None;
-role = bool(None); cr = int (0);
+role = bool(); cr = int (0);
 soma = float(0); sys = str(1);
 
 #Inicio do programa
@@ -14,7 +14,7 @@ print("por favor, se voce é cliente digite '1' senão, se for colaborador, digi
 
 while(sys != str(0)):
 
-    while(cr != str(3) and role != True and role != False):
+    while(cr != str(3) and cr != str(2) and cr != str(1)):
         cr = input("Digite 1 para cliente, 2 para colaborador ou 3 para sair: ");
         if (cr == str(1)):
             role = True;
@@ -116,8 +116,9 @@ while(sys != str(0)):
         cr = str(0);
     else:
         sys = str(0);
+        print("\nSistema finalizado, obrigado por usar nosso sistema !!!\n");
 
-    print("\nSistema finalizado, obrigado por usar nosso sistema !!!\n");
+    
         
 
 
