@@ -112,12 +112,13 @@ while(sys != str(0)):
         
         print("\nProdutos cadastrados com sucesso !!!\n");
 sys = input("Deseja reiniciar o sistema ? (digite 's' para sim ou 'n' para não) : ");
-if (sys == 's'):
-    sys = str(1);
-    cr = str(0);
+    if (sys == 's'):
+        sys = str(1);
+        cr = str(0);
+    else:
+        sys = str(0);
 else:
-    sys = 0;
-print("\nSistema finalizado, obrigado por usar nosso sistema !!!\n");
+    print("\nSistema finalizado, obrigado por usar nosso sistema !!!\n");
         
 
 
