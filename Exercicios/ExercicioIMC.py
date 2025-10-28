@@ -1,10 +1,10 @@
 #Declaração de variaveis
-preco1 = float; produto1=None;
-preco2 = float; produto2=None;
-preco3 = float; produto3=None;
-preco4 = float; produto4=None;
-preco5 = float; produto5=None;
-role = bool; cr = int (0);
+preco1 = 0.0; produto1=None;
+preco2 = 0.0; produto2=None;
+preco3 = 0.0; produto3=None;
+preco4 = 0.0; produto4=None;
+preco5 = 0.0; produto5=None;
+role = bool(None); cr = int (0);
 soma = float(0); sys = str(1);
 
 #Inicio do programa
@@ -32,7 +32,6 @@ while(sys != str(0)):
     if (role == True):
         if(not produto1 or not produto2 or not produto3 or not produto4 or not produto5):
             print("\nNossa loja está sem produtos no momento, por favor volte mais tarde\n");
-            break
         else: 
             print("\nAgora que sabemos que voce é cliente, vamos começar as compras\n");
             
@@ -47,7 +46,7 @@ while(sys != str(0)):
             print("Se sim, digite o numero do produto que deseja comprar, se não, digite 0 para sair\n");
             
             while(soma != 0):
-                cat = input("Numero do produto desejado (1 a 5) ou 0 para sair: ")
+                cat = int(input("Numero do produto desejado (1 a 5) ou 0 para sair: "))
                 if (cat == 1):
                     soma = soma + preco1;
                     print("\nvalor atual de compra R$"+ str(soma) + " : ");
