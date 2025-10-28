@@ -4,18 +4,17 @@ preco2 = 0.0; produto2=None;
 preco3 = 0.0; produto3=None;
 preco4 = 0.0; produto4=None;
 preco5 = 0.0; produto5=None;
-role = bool(); cr = int (0);
+role = bool(); cr = str (0);
 soma = float(0); sys = str(1);
 
 #Inicio do programa
-print("Olá, seja bem vindo a loja\n");
-print("Antes de começarmos, gostaria de saber se voce é cliente ou colaborador...\n");
-print("por favor, se voce é cliente digite '1' senão, se for colaborador, digite '2'\n");
-
 while(sys != str(0)):
+    print("\n\n\n\nOlá, seja bem vindo a loja\n");
+    print("Antes de começarmos, gostaria de saber se voce é cliente ou colaborador...\n");
+    print("por favor, se voce é cliente digite '1' senão, se for colaborador, digite '2'\n");
 
     while(cr != str(3) and cr != str(2) and cr != str(1)):
-        cr = input("Digite 1 para cliente, 2 para colaborador ou 3 para sair: ");
+        cr = input("\nDigite 1 para cliente, 2 para colaborador ou 3 para sair: ");
         if (cr == str(1)):
             role = True;
             print("\nLegal !!!\n Seja bem vindo a nossa loja");
@@ -114,9 +113,13 @@ while(sys != str(0)):
     if (sys == 's'):
         sys = str(1);
         cr = str(0);
-    else:
+    elif(sys == 'n'):
         sys = str(0);
         print("\nSistema finalizado, obrigado por usar nosso sistema !!!\n");
+    else:
+        sys = str(0);
+        print("\nEntrada inválida, finalizando o sistema. Obrigado por usar nosso sistema !!!\n");
+
 
     
         
