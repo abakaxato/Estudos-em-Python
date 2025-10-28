@@ -72,7 +72,7 @@ while(sys != str(0)):
                     comprando = input("quer fechar a compra ? (digite 's' para sim ou 'n' para não) : ");
                     if (comprando == 's'):
                         compras = 0;
-                        print("\nObrigado por visitar nossa loja, volte sempre !!!\n");
+                        print("\nObrigado por visitar nossa loja",cliente_atual,"!, volte sempre !!!\n");
                         print("\n voce fechou uma compra de no valor de R$"+ str(soma) + " : ");
                     else:
                         continue;
@@ -83,7 +83,7 @@ while(sys != str(0)):
                     comprando = input("quer fechar a compra ? (digite 's' para sim ou 'n' para não) : ");
                     if (comprando == 's'):
                         compras = 0;
-                        print("\nObrigado por visitar nossa loja, volte sempre !!!\n");
+                        print("\nObrigado por visitar nossa loja",cliente_atual,"!, volte sempre !!!\n");
                         print("\n voce fechou uma compra de no valor de R$"+ str(soma) + " : ");
                     else:
                         continue;
@@ -94,7 +94,7 @@ while(sys != str(0)):
                     comprando = input("quer fechar a compra ? (digite 's' para sim ou 'n' para não) : ");
                     if (comprando == 's'):
                         compras = 0;
-                        print("\nObrigado por visitar nossa loja, volte sempre !!!\n");
+                        print("\nObrigado por visitar nossa loja",cliente_atual,"!, volte sempre !!!\n");
                         print("\n voce fechou uma compra de no valor de R$"+ str(soma) + " : ");
                     else:
                         continue;
@@ -105,7 +105,7 @@ while(sys != str(0)):
                     comprando = input("quer fechar a compra ? (digite 's' para sim ou 'n' para não) : ");
                     if (comprando == 's'):
                         compras = 0;
-                        print("\nObrigado por visitar nossa loja, volte sempre !!!\n");
+                        print("\nObrigado por visitar nossa loja",cliente_atual,"!, volte sempre !!!\n");
                         print("\n voce fechou uma compra de no valor de R$"+ str(soma) + " : ");
                     else:
                         continue;
@@ -116,12 +116,12 @@ while(sys != str(0)):
                     comprando = input("quer fechar a compra ? (digite 's' para sim ou 'n' para não) : ");
                     if (comprando == 's'):
                         compras = 0;
-                        print("\nObrigado por visitar nossa loja, volte sempre !!!\n");
+                        print("\nObrigado por visitar nossa loja",cliente_atual,"!, volte sempre !!!\n");
                         print("\n voce fechou uma compra de no valor de R$"+ str(soma) + " : ");
                     else:
                         continue;
                 elif (cat == 0):
-                    print("\nObrigado por visitar nossa loja, volte sempre !!!\n");
+                    print("\nObrigado por visitar nossa loja",cliente_atual,"!, volte sempre !!!\n");
                 else:
                     print("\nValor inválido, por favor digite um valor entre 0 e 5\n");
     else:
@@ -167,7 +167,15 @@ while(sys != str(0)):
             except ValueError:
                 print("\nValor inválido, por favor digite um valor numérico para o preço\n");
         
-        print("\nProdutos cadastrados com sucesso !!!\n");
+        print("\n\nAgora, cadastre os clientes da loja\n");
+        cliente1 = input("Digite o nome do cliente 1: ")
+        print("cliente",cliente1,"cadastrado com sucesso !!!\n");
+        cliente2 = input("Digite o nome do cliente 2: ")
+        print("cliente",cliente2,"cadastrado com sucesso !!!\n");
+        cliente3 = input("Digite o nome do cliente 3: ")
+        print("cliente",cliente3,"cadastrado com sucesso !!!\n");   
+                
+        print("\nProdutos e clientes cadastrados com sucesso !!!\n");
     sys = input("Deseja reiniciar o sistema ? (digite 's' para sim ou 'n' para não) : ");
     if (sys == 's'):
         sys = str(1);
