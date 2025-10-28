@@ -5,16 +5,16 @@ preco3 = float; produto3=str;
 preco4 = float; produto4=str;
 preco5 = float; produto5=str;
 role = bool; cr = int (0);
-soma = int(0); sys = int(1);
+soma = float(0); sys = str(1);
 
 #Inicio do programa
 print("Olá, seja bem vindo a loja\n");
 print("Antes de começarmos, gostaria de saber se voce é cliente ou colaborador...\n");
 print("por favor, se voce é cliente digite '1' senão, se for colaborador, digite '2'\n");
 
-while(sys != 0):
+while(sys != str(0)):
 
-    while(cr != str(3)):
+    while(cr != str(3) and role != True and role != False):
         cr = input("Digite 1 para cliente, 2 para colaborador ou 3 para sair: ");
         if (cr == str(1)):
             role = True;
@@ -32,6 +32,7 @@ while(sys != 0):
     if (role == True):
         if(not produto1 or produto2 or produto3 or produto4 or produto5):
             print("\nNossa loja está sem produtos no momento, por favor volte mais tarde\n");
+            break
         else: 
             print("\nAgora que sabemos que voce é cliente, vamos começar as compras\n");
             
@@ -110,13 +111,13 @@ while(sys != 0):
         preco5 = float(input("Digite o preço do produto 5: R$"));
         
         print("\nProdutos cadastrados com sucesso !!!\n");
-    sys = input("Deseja reiniciar o sistema ? (digite 's' para sim ou 'n' para não) : ");
-    if (sys == 's'):
-        sys = 1;
-        cr = str(0);
-    else:
-        sys = 0;
-        print("\nSistema finalizado, obrigado por usar nosso sistema !!!\n");
+sys = input("Deseja reiniciar o sistema ? (digite 's' para sim ou 'n' para não) : ");
+if (sys == 's'):
+    sys = str(1);
+    cr = str(0);
+else:
+    sys = 0;
+print("\nSistema finalizado, obrigado por usar nosso sistema !!!\n");
         
 
 
