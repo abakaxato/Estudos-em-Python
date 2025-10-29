@@ -16,8 +16,8 @@ while(sys != str(0)):
     print("Antes de começarmos, gostaria de saber se voce é cliente ou colaborador...\n");
     print("por favor, se voce é cliente digite '1' senão, se for colaborador, digite '2'\n");
 
-    while(entrada != str(3) and entrada != str(2) and entrada != str(1)):
-        entrada = input("\nDigite 1 para cliente, 2 para colaborador ou 3 para sair: ");
+    while(entrada != str(2) and entrada != str(1)):
+        entrada = input("\nDigite 1 para cliente, 2 para colaborador ou digite qualquer coisa para sair: ");
         if (entrada == str(1)):
             role = True;
             print("\nLegal !!!\n Seja bem vindo a nossa loja");
@@ -64,6 +64,11 @@ while(sys != str(0)):
                 print("Se sim, digite o numero do produto que deseja comprar, se não, digite 0 para sair\n");
             
                 while(compras != 0):
+                    try:
+                        cat = int(input("\nNumero do produto desejado (1 a 5) ou 0 para sair: "))
+                    except ValueError:
+                        print("\nValor inválido, por favor digite um valor entre 0 e 5\n");
+                        continue;
                     cat = int(input("\nNumero do produto desejado (1 a 5) ou 0 para sair: "))
                     if (cat == 1):
                         soma = soma + preco1;
