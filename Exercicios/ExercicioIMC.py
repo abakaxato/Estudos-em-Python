@@ -1,10 +1,10 @@
 #Declaração de variaveis
-preco1 = 0.0; produto1=None;
-preco2 = 0.0; produto2=None;
-preco3 = 0.0; produto3=None;
-preco4 = 0.0; produto4=None;
-preco5 = 0.0; produto5=None;
-role = bool(); entrada = str (0);
+preco1 = None; produto1=None;
+preco2 = None; produto2=None;
+preco3 = None; produto3=None;
+preco4 = None; produto4=None;
+preco5 = None; produto5=None;
+role = bool(None); entrada = str (0);
 soma = float(0); sys = str(1);
 compras = int(1); comprando = str();
 cliente1 = str(); cliente2 = str();
@@ -15,9 +15,9 @@ while(sys != str(0)):
     print("\n\n\n\nOlá, seja bem vindo a loja\n");
     print("Antes de começarmos, gostaria de saber se voce é cliente ou colaborador...\n");
     print("por favor, se voce é cliente digite '1' senão, se for colaborador, digite '2'\n");
+    entrada = input("\nDigite 1 para cliente, 2 para colaborador ou 3 para sair: ");
 
     while(entrada != str(3) and entrada != str(2) and entrada != str(1)):
-        entrada = input("\nDigite 1 para cliente, 2 para colaborador ou 3 para sair: ");
         if (entrada == str(1)):
             role = True;
             print("\nLegal !!!\n Seja bem vindo a nossa loja");
