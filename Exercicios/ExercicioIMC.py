@@ -69,7 +69,6 @@ while(sys != str(0)):
                     except ValueError:
                         print("\nValor inválido, por favor digite um valor entre 0 e 5\n");
                         continue;
-                    cat = int(input("\nNumero do produto desejado (1 a 5) ou 0 para sair: "))
                     if (cat == 1):
                         soma = soma + preco1;
                         print("\nVocê adicionou", produto1, "ao carrinho.");
@@ -181,18 +180,18 @@ while(sys != str(0)):
             print("cliente",cliente3,"cadastrado com sucesso !!!\n");   
                 
             print("\nProdutos e clientes cadastrados com sucesso !!!\n");
-    sys = input("Deseja reiniciar o sistema ? (digite 's' para sim ou 'n' para não) : ");
-    if (sys == 's'):
-        sys = str(1);
-        entrada = str(0);
-        soma = float(0);
-        compras = int(1);
-    elif(sys == 'n'):
-        sys = str(0);
-        print("\nSistema finalizado, obrigado por usar nosso sistema !!!\n");
-    else:
-        sys = str(0);
-        print("\nEntrada inválida, finalizando o sistema. Obrigado por usar nosso sistema !!!\n");
+    while(sys != str(0)):
+        sys = input("Deseja reiniciar o sistema ? (digite 's' para sim ou 'n' para não) : ");
+        if (sys == 's'):
+            sys = str(1);
+            entrada = str(0);
+            soma = float(0);
+            compras = int(1);
+        elif(sys == 'n'):
+            sys = str(0);
+            print("\nSistema finalizado, obrigado por usar nosso sistema !!!\n");
+        else:
+            print("\nEntrada inválida, Digite um valor valido e tente novamente !!!\n");
 
 
     
