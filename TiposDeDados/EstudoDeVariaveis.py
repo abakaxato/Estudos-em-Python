@@ -4,6 +4,7 @@
 #Outra particuliariedade é o snake case no Python. java = nomeComposto, Python = nome_composto
 
 #declaracao de interiro
+# não precisa especificar o tipo da variavel
 idade = int (22);
 #declaracao de String
 nome = "Cauã Ricardo";
@@ -11,6 +12,7 @@ nome = "Cauã Ricardo";
 peso = 44.44;
 #declaracao de boolean
 esta_vivo = True;
+
 #formatação de Strings
 
 #1° forma - usando {} oara utilizar variaveis no lugar no texto da String, tem que colocar o "f" antes das aspas
@@ -22,8 +24,9 @@ print(variavel_Sting)
 #é possivel também limitar as casas decimais de um float, colocando a limitação dentro das chaves correspondentes
 
 # colocando numeros dentro das chaves, podemos definir a ordem dos parametros, senão eles seguem da esquerda para direita
-variavel_String2 = "tenho {0:.2f} anos, estou vivo ? = {vida}"
+variavel_String2 = "tenho {0:.2f} anos, estou vivo ? = {vida}, meu vulgo é {vulgo}"
 #também é possivel nomear os parametros dentro das chaves exemplo 'vida'
-saida =variavel_String2.format(idade, vida=esta_vivo)
+#todos os parametros depois que um foi nomeado, devem ser nomeados também
+saida =variavel_String2.format(idade, vida=esta_vivo, vulgo = nome)
 
 print(saida)
