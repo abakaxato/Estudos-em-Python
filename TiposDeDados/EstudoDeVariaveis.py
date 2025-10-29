@@ -11,3 +11,11 @@ Nome = "Cauã Ricardo";
 peso = 44.44;
 #declaracao de boolean
 esta_vivo = True;
+#formatação de Strings
+
+#tem como formatar as String de varias formas
+nome = "Cauã";
+idade = 22;
+#1° forma - usando {} oara utilizar variaveis no lugar no texto da String, tem que colocar o "f" antes das aspas
+variavel_Sting = f"meu nome é {nome} e minha idade é {idade}"
+print(variavel_Sting)
