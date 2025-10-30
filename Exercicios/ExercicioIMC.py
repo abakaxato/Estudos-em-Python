@@ -63,7 +63,7 @@ while(sys != str(0)):
                 print("Esta interessado em comprar algum produto desses ?")
                 print("Se sim, digite o numero do produto que deseja comprar, se não, digite 0 para sair\n");
             
-                while(compras != 0):
+                while(compras != int(0)):
                     try:
                         cat = int(input("\nNumero do produto desejado (1 a 5) ou 0 para sair: "))
                     except ValueError:
@@ -180,18 +180,25 @@ while(sys != str(0)):
             print("cliente",cliente3,"cadastrado com sucesso !!!\n");   
                 
             print("\nProdutos e clientes cadastrados com sucesso !!!\n");
-    while(sys != str(0)):
         sys = input("Deseja reiniciar o sistema ? (digite 's' para sim ou 'n' para não) : ");
         if (sys == 's'):
             sys = str(1);
             entrada = str(0);
             soma = float(0);
             compras = int(1);
+            role = bool(None);
+            cliente_atual = str();
         elif(sys == 'n'):
             sys = str(0);
             print("\nSistema finalizado, obrigado por usar nosso sistema !!!\n");
         else:
-            print("\nEntrada inválida, Digite um valor valido e tente novamente !!!\n");
+            sys = str(1);
+            entrada = str(0);
+            soma = float(0);
+            compras = int(1);
+            role = bool(None);
+            cliente_atual = str();
+            print("\nEntrada inválida, Reiniciando o sistema !!!\n");
 
 
     
