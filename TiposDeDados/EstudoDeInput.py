@@ -4,6 +4,7 @@
 # para o tipo desejado
 
 #exemplo de input recebendo uma String
+
 nome = input("Digite seu nome: ");
 print(f"Seu nome é {nome}");
 #exemplo de input recebendo um inteiro
