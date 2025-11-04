@@ -13,7 +13,7 @@ print(nome[-12])
 
 #formatação de Strings
 """
-1° forma - usando {} oara utilizar variaveis no lugar no texto da String, tem que colocar o "f" antes das aspas
+1° forma - usando {} para utilizar variaveis no lugar no texto da String, tem que colocar o "f" antes das aspas
 isso também serve para limitar as casas decimais de um float, isso é chamado de f-string, 'f' de format
 """
 variavel_Sting = f"meu nome é {nome} e minha idade é {peso:.1f}"
@@ -30,7 +30,7 @@ variavel_String2 = "tenho {0:.2f} anos, estou vivo ? : {vida}, meu vulgo é {vul
 também é possivel nomear os parametros dentro das chaves exemplo 'vida'
 todos os parametros depois que um foi nomeado, devem ser nomeados também
 """
-saida =variavel_String2.format(idade, vida=vivo, vulgo = nome)
+saida = variavel_String2.format(idade, vida=vivo, vulgo = nome)
 
 print(saida)
 
@@ -71,3 +71,19 @@ print(f"{variavel_f_float:.1f}")
 print(f"{variavel_f_float:+.1f}")
 """ 'x ou X' serve pra exibir o exadecimal do valor """
 print(f"{variavel_f_int:2X}")
+
+#Aprofundando o conhecimento no acesso de indices das string sem python
+variavel_i_string = "caua ricardo"
+
+    #Usando o fatiamento de strings
+"""colocando o indice e um ':' a direita ele vai trazer o valor apos aquele indice"""
+print(variavel_i_string[4:])
+"""colocando o indice e um ':' a esquerda ele vai trazer o valor antes aquele indice"""
+print(variavel_i_string[:4])
+"""colocando o indice e um ':' entre outro indice ele vai trazer o valor entre aqueles indices"""
+print(variavel_i_string[2:4])
+
+#verificando quantos caracteres tem dentro de uma string
+"""A função 'len' pode verificar quantos caracteres tem dentro de uma String"""
+variavel_l_string = "joao do pé de feijão"
+print(len(variavel_l_string))
