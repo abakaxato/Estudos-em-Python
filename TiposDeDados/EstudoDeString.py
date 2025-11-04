@@ -82,8 +82,13 @@ print(variavel_i_string[4:])
 print(variavel_i_string[:4])
 """colocando o indice e um ':' entre outro indice ele vai trazer o valor entre aqueles indices"""
 print(variavel_i_string[2:4])
+"""colocando mais um ':' depois do intervalo que voce quer se seja exibido, é especificado o pulo de caracteres"""
+print(variavel_i_string[0:11:2])
+"""colocando um valor negativo no pulo, ele vira a string ao contrario"""
+print(variavel_i_string[::-1])
+
 
 #verificando quantos caracteres tem dentro de uma string
 """A função 'len' pode verificar quantos caracteres tem dentro de uma String"""
 variavel_l_string = "joao do pé de feijão"
-print(len(variavel_l_string))
+print( len(variavel_l_string))
