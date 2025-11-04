@@ -44,16 +44,16 @@ while(parar != "0"):
     #Ele serve para vasculhar dentro da String e retorna true se o valor estiver dentro da string de referencia
     elif(teste == "in"):
         if(entrada_nome_usuario in nome_usuario):
-            print("Nome encontrado dentro do nome do usuario, acesso concedido")
+            print(f"{entrada_nome_usuario}encontrado dentro do nome do usuario, acesso concedido")
         else:
-            print("Nome não encontrado dentro do nome do usuario, acesso negado")
+            print(f"{entrada_nome_usuario} não foi encontrado dentro do nome do usuario, acesso negado")
     
     #Exemplo de utilização do NOT
     #Ele serve para vasculhar dentro da String e retorna true se o valor estiver dentro da string de referencia
     elif(teste == "notin"):
         if(entrada_nome_usuario not in nome_usuario):
-            print("Nome não encontrado dentro do nome do usuario, acesso negado")
+            print(f"{entrada_nome_usuario} não foi encontrado dentro do nome do usuario, acesso negado")
         else:
-            print("Nome encontrado dentro do nome do usuario, acesso concedido")
+            print(f"{entrada_nome_usuario}encontrado dentro do nome do usuario, acesso concedido")
     else:
         parar = input("\nDeseja encerrar o programa ? (sim = 0):")
