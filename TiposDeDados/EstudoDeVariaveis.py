@@ -13,6 +13,10 @@ peso = 44.44;
 #declaracao de boolean
 esta_vivo = True;
 
+
+#exemplo de acesso ao indice da String para acessar o primeiro valor
+print(nome[5])
+print(nome[-7])
 #formatação de Strings
 
 #1° forma - usando {} oara utilizar variaveis no lugar no texto da String, tem que colocar o "f" antes das aspas
