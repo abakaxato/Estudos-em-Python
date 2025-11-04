@@ -12,7 +12,6 @@ print(nome[0])
 print(nome[-12])
 
 #formatação de Strings
-
 """
 1° forma - usando {} oara utilizar variaveis no lugar no texto da String, tem que colocar o "f" antes das aspas
 isso também serve para limitar as casas decimais de um float, isso é chamado de f-string, 'f' de format
@@ -23,13 +22,10 @@ print(variavel_Sting)
 """
 2° forma - usando o metodo .format() para formatar a String
 ele serve para utilizar parametros dentro de uma String, substituindo os {}
-é possivel também limitar as casas decimais de um float, colocando a limitação dentro das chaves correspondentes
-"""
-
-"""
+é possivel também limitar as casas decimais de um float, colocando a limitação dentro das chaves correspondentes.
 colocando numeros dentro das chaves, podemos definir a ordem dos parametros, senão eles seguem da esquerda para direita
 """
-variavel_String2 = "tenho {0:.2f} anos, estou vivo ? = {vida}, meu vulgo é {vulgo}"
+variavel_String2 = "tenho {0:.2f} anos, estou vivo ? : {vida}, meu vulgo é {vulgo}"
 """
 também é possivel nomear os parametros dentro das chaves exemplo 'vida'
 todos os parametros depois que um foi nomeado, devem ser nomeados também
@@ -38,9 +34,8 @@ saida =variavel_String2.format(idade, vida=vivo, vulgo = nome)
 
 print(saida)
 
+#Interpolação básica de Strings
 """
-Interpolação básica de Strings
-
 s - string
 d e i - int
 f - float
@@ -54,3 +49,25 @@ print(interpolacao)
 
 """Testando o hexadecimal"""
 print("O hexadecimal de %i é %X"%(2490,2490))
+
+#aprofundando a formatação de Strings com f-Strings
+variavel_f_string = str = "ABCD"
+variavel_f_float = float(12.23)
+variavel_f_int = int(298)
+print(f'{variavel_f_string}')
+
+    #Chamados de pede = são as repetições de caracteres ao redor da sua string
+""" '>' serve pra preencher para a esquerda o caracter que você escolher"""
+print(f'{variavel_f_string:7>10}')
+""" '<' serve pra preencher para a direita o caracter que você escolher"""
+print(f'{variavel_f_string:7<10}')
+""" '^' serve pra preencher a sua string no centro do caracter que você escolher"""
+print(f'{variavel_f_string:7^10}')
+
+    #Formatação de numeros
+""" '.f' serve pra delimitar o numero de casas decimais, tendo que inserir o numero entre o '.' e o 'f' """
+print(f"{variavel_f_float:.1f}")
+""" '+' serve pra expresar que eu desejo ver o "+" quando o numero for positivo """
+print(f"{variavel_f_float:+.1f}")
+""" 'x ou X' serve pra exibir o exadecimal do valor """
+print(f"{variavel_f_int:2X}")
