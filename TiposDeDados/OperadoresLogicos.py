@@ -1,4 +1,5 @@
 #Os operadores Logicos do Python são os mesmos das outras linguagens "and", "or" e "not".
+# mas temos outros operadores que vão ser testados abaixo
 # também temos algums operadores especias como é o caso do "none" que serve para representar um "não valor".
 
 # Uma curiosidade sobre a avaliação das condições é que quando o compilador teste as condições que vão ser comparadas
@@ -14,8 +15,8 @@ parar = "1"
 while(parar != "0"):
     entrada_nome_usuario = input("Digite o nome do usuario para iniciar a sessão :")
     entrada_senha_usuario = input("\n Agora digite a senha do usuario correspondente :")
-    teste = input("quer testar o AND, OR ou o NOT ? :")
-    print(f"Usuario digitado {entrada_nome_usuario}\n Senha digitada {entrada_senha_usuario}\n\n")
+    teste = input("quer testar o AND, OR,NOT, IN ou NOT IN? :")
+    print(f"Usuario digitado :{entrada_nome_usuario}:\n Senha digitada :{entrada_senha_usuario}:\n\n")
 
     #exemplo de utilização do AND
     if(teste == "and"):
@@ -38,5 +39,21 @@ while(parar != "0"):
     elif(teste == "not"):
         if(not nome_usuario != entrada_nome_usuario): 
             print("\n nome correto")
+    
+    #Exemplo de utilização do IN
+    #Ele serve para vasculhar dentro da String e retorna true se o valor estiver dentro da string de referencia
+    elif(teste == "in"):
+        if(entrada_nome_usuario in nome_usuario):
+            print("Nome encontrado dentro do nome do usuario, acesso concedido")
+        else:
+            print("Nome não encontrado dentro do nome do usuario, acesso negado")
+    
+    #Exemplo de utilização do NOT
+    #Ele serve para vasculhar dentro da String e retorna true se o valor estiver dentro da string de referencia
+    elif(teste == "notin"):
+        if(entrada_nome_usuario not in nome_usuario):
+            print("Nome não encontrado dentro do nome do usuario, acesso negado")
+        else:
+            print("Nome encontrado dentro do nome do usuario, acesso concedido")
     else:
-        parar = input("\nDeseja encerrar o programa ? :")
+        parar = input("\nDeseja encerrar o programa ? (sim = 0):")
