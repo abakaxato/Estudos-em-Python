@@ -8,3 +8,4 @@ try:
     print(f"O valor que você digitou foi {valor_numerico} e esse valor duplicado é {valor_numerico * 2}")
 except ValueError:
     print("você não digitou um numero")
+    
