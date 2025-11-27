@@ -12,7 +12,7 @@ val2 = ""
 
 # Inicio do programa
 while end_prog != 0:
-    name = input("Olá !\n por favor digite seu nome : ")
+    name = input("\n\n\n\nOlá !\n por favor digite seu nome : ")
     
     print(f"Ok, {name.capitalize()} ! Vamos iniciar...\n")
 
@@ -31,47 +31,40 @@ while end_prog != 0:
             print("\n DIGITE APENAS NUMEROS... \n")
     
     while val != 1:
-        print(f"Esses são os números que você digitou {number1} e {number2}.\n Qual tipo de operação você quer fazer ?")
-        val2 = input("\n digite '+' para Adição\ndigite '-' para subtração\ndigite 'x' para multiplicação\ndigite '/' para Divisão\n")
+        print(f"\n Esses são os números que você digitou {number1} e {number2}.\n Qual tipo de operação você quer fazer ?")
+        val2 = input("\ndigite '+' para Adição\ndigite '-' para subtração\ndigite 'x' para multiplicação\ndigite '/' para Divisão\n")
         if val2 == "+":
-            print("O resultado da sua adição é " + (number1 + number2))
+            print("O resultado da sua adição é " + str(number1 + number2))
             val = 1
         elif val2 == "-":
-            print("O resultado da sua subtração é " + (number1 - number2))
+            print("O resultado da sua subtração é " + str(number1 - number2))
             val = 1
         elif val2 == "x":
-            print("O resultado da sua multiplicação é " + (number1 * number2))
+            print("O resultado da sua multiplicação é " + str(number1 * number2))
             val = 1
-        elif val2 == "+":
-            print("O resultado da sua divisão é " + (number1 / number2))
+        elif val2 == "/":
+            print("O resultado da sua divisão é " + str(number1 / number2))
             val = 1
         else:
-            print("Você não digitou um operador desconhecido")
+            print("VOCÊ DIGITOU UM OPERADOR DESCONHECIDO ! ")
             val = 0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  #Final do programa(Loop de confirmação)
-    while reply.lower() != "sim" and reply.lower() != "não"  or end_prog == 1:
+    while reply.lower() != "sim" and reply.lower() != "não"  or end_prog == 0:
         reply = input("Você deseja finalizar o programa ? Responda com sim ou não : ")
         print(reply.lower())
         if reply.lower() == "sim":
             print("OK ! O programa foi encerrado...")
             end_prog = 0
+            break
         elif reply.lower() == "não":
             print("OK ! O programa foi reiniciado...\n")
+            number1 = float(0)
+            number2 = float(0)
+            type_calc = str (None)
+            reply = str (None)
             end_prog = 1
+            name = str (None)
+            val = 0
+            val2 = ""
         else : print("Responda com sim ou não")
