@@ -12,13 +12,22 @@ val = 0
 # Inicio do programa
 while end_prog != 0:
     name = input("Olá !\n por favor digite seu nome : ")
+    
+    print(f"Ok, {name.capitalize()} ! Vamos iniciar...\n")
+
+    #validação das entradas do usuário
     while val == 0:
         try :
-            number1 = float(input(f"Ok, {name.capitalize()} !\n Por favor digite o primeiro número : "))
+            number1 = float(input("Por favor digite o primeiro número : "))
             val = 1
         except ValueError:
-            print("por favor digite apenas números")
-    
+            print("\n DIGITE APENAS NUMEROS... \n")
+    while val == 1:
+        try :
+            number2 = float(input("\nPor favor digite o segundo número : "))
+            val = 0
+        except ValueError:
+            print("\n DIGITE APENAS NUMEROS... \n")
     
 
 
