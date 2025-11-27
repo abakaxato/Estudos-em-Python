@@ -26,7 +26,7 @@ while end_prog != 0:
 
 
 
-    while reply.lower() != "sim" and reply.lower() != "não"  and end_prog == 1:
+    while reply.lower() != "sim" and reply.lower() != "não"  or end_prog == 1:
         reply = input("Você deseja finalizar o programa ? Responda com sim ou não : ")
         print(reply.lower())
         if reply.lower() == "sim":
