@@ -1,0 +1,1 @@
+#Para esse exercicio eu devo criar uma calculadora simples (provavelmente eu vou querer colocar algumas coisas a maiskkk).
