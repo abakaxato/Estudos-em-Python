@@ -8,6 +8,7 @@ reply = str (None)
 end_prog = 1
 name = str (None)
 val = 0
+val2 = ""
 
 # Inicio do programa
 while end_prog != 0:
@@ -29,6 +30,24 @@ while end_prog != 0:
         except ValueError:
             print("\n DIGITE APENAS NUMEROS... \n")
     
+    while val != 1:
+        print(f"Esses são os números que você digitou {number1} e {number2}.\n Qual tipo de operação você quer fazer ?")
+        val2 = input("\n digite '+' para Adição\ndigite '-' para subtração\ndigite 'x' para multiplicação\ndigite '/' para Divisão\n")
+        if val2 == "+":
+            print("O resultado da sua adição é " + (number1 + number2))
+            val = 1
+        elif val2 == "-":
+            print("O resultado da sua subtração é " + (number1 - number2))
+            val = 1
+        elif val2 == "x":
+            print("O resultado da sua multiplicação é " + (number1 * number2))
+            val = 1
+        elif val2 == "+":
+            print("O resultado da sua divisão é " + (number1 / number2))
+            val = 1
+        else:
+            print("Você não digitou um operador desconhecido")
+            val = 0
 
 
 
