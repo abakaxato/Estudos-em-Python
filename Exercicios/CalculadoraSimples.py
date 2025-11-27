@@ -6,8 +6,20 @@ number2 = float(0)
 type_calc = str (None)
 reply = str (None)
 end_prog = 1
+name = str (None)
+val = 0
 
+# Inicio do programa
 while end_prog != 0:
+    name = input("Olá !\n por favor digite seu nome : ")
+    while val == 0:
+        try :
+            number1 = float(input(f"Ok, {name.capitalize()} !\n Por favor digite o primeiro número : "))
+            val = 1
+        except ValueError:
+            print("por favor digite apenas números")
+    
+    
 
 
 
@@ -24,8 +36,7 @@ while end_prog != 0:
 
 
 
-
-
+ #Final do programa(Loop de confirmação)
     while reply.lower() != "sim" and reply.lower() != "não"  or end_prog == 1:
         reply = input("Você deseja finalizar o programa ? Responda com sim ou não : ")
         print(reply.lower())
